@@ -4,7 +4,7 @@
 #include <asm/fpu/api.h>
 
 MODULE_AUTHOR("Guilherme Giacomo Simoes <trintaeoitogc@gmail.com>");
-MODULE_DESCRIPTION("This lib will ");
+MODULE_DESCRIPTION("This lib will show float-point in printk()");
 MODULE_LICENSE("Dual MIT/GPL");
 MODULE_VERSION("0.1");
 
