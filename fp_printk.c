@@ -12,3 +12,5 @@ static char* __init fp_printk(float number)
 {
 
 }
+
+EXPORT_SYMBOL(fp_printk);
