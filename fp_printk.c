@@ -9,6 +9,11 @@ MODULE_VERSION("0.1");
 
 static void __init fp_printk_init(float number) 
 {
+    fp_printk();
+}
+
+static char* fp_printk(float number) 
+{
 
 }
 
@@ -19,11 +24,6 @@ static void __exit fp_printk_exit(void)
     snprinf(number_in_str, number_length+1, "%f", number);
 
     return buff;
-}
-
-static char* fp_printk(float number) 
-{
-
 }
 
 module_init(fp_printk);
