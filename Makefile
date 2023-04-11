@@ -3,10 +3,11 @@ FNAME_c := fp_printk
 PWD := $(shell pwd)
 obj-m += $(FNAME_c).o
 EXTRA_CFLAGS += -DDEBUG
+KDIR ?= /lib/modules/$(shell uname -r)/build
 
 all:
 	@echo
-	@echo '--- Building : KDIR=${KDIR} ARCH=${ARCH} CROSS_COMPILE=${CROSS_COMPILE} EXTRA_CFLAGS=${EXTRA_CFLAGS} ---'
+	@echo '--- Building : KDIR=${KDIR} EXTRA_CFLAGS=${EXTRA_CFLAGS} ---'
 	@echo
 	make -C $(KDIR) M=$(PWD) modules
 
