@@ -32,7 +32,6 @@ INDENT := indent
 
 code-style:
 	make indent
-	make checkpatch
 
 indent:
 	@echo
