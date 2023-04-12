@@ -44,13 +44,13 @@ void fp_printk(void)
         i++;
     }
 
-    int j = 0;
+    int index_destination = 0;
     int zero_fill = 1;
     for(i=strlength(result)-1; i>=0; i--) {
         if(result[i] != '0' || !zero_fill) {
             zero_fill = 0;
-            *(destination + j) = result[i];
-            j++;
+            *(destination + index_destination) = result[i];
+            index_destination++;
         }
     }
 }
