@@ -17,9 +17,9 @@ int strlength(char* str)
     return sizeof(str)/sizeof(char);
 }
 
-void memory_set_value(char *r, char value, int size) 
+void memory_set_value(char *r, char value) 
 {
-    for(int i=0; i < size; i++) {
+    for(int i=0; i < strlength(r)-1; i++) {
         *(r + i) = value;
     }
 }
