@@ -57,7 +57,7 @@ void fp_printk(void)
 
 static int __init fp_printk_init(void) 
 {
-    if(number == NULL || destination == NULL) return -EINVAL;
+    if(destination == NULL) return -EINVAL;
     fp_printk();
     return 0;
 }
