@@ -7,10 +7,10 @@ MODULE_DESCRIPTION("This lib will show float-point in printk()");
 MODULE_LICENSE("MIT");
 MODULE_VERSION("0.2.0");
 
-static void __init fp_printk_init(void) 
-{
-    fp_printk();
-}
+float number;
+char* destination;
+module_param(number, float, 0660);
+module_param(destination, char*, 0660);
 
 int strlength(char* str) 
 {
@@ -26,11 +26,6 @@ void memory_set_value(char *r, char value, int size)
 
 void float_2_byte() 
 {
-    float number;
-    char* destination;
-    module_param(number, float, 0660);
-    module_param(destination, char*, 0660);
-
     char result[100];
 
     int d_val = number, 
@@ -58,6 +53,13 @@ void float_2_byte()
             j++;
         }
     }
+}
+
+static int __init fp_printk_init(void) 
+{
+    if(number == NULL || destination == NULL) return -EINVAL;
+    fp_printk();
+    return 0;
 }
 
 static void __exit fp_printk_exit(void) 
