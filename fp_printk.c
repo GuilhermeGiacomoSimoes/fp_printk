@@ -32,7 +32,7 @@ void fp_printk(void)
         dec = (int) (number * 100) % 100, 
         i=3;
 
-    memory_set_value(result, '0', 100);
+    memory_set_value(result, '0');
     result[0] = (dec % 10) + '0';
     result[1] = (dec / 10) + '0';
     result[2] = '.';
