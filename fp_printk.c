@@ -10,7 +10,7 @@ MODULE_VERSION("0.2.0");
 static float number;
 static char* destination;
 module_param(number, float, 0660);
-module_param(destination, char*, 0660);
+module_param(destination, charp, 0660);
 
 int strlength(char* str) 
 {
