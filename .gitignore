@@ -1,2 +1,3 @@
 a.out
 fp_printk.ko
+.fp_printk.o.d
