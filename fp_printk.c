@@ -24,7 +24,7 @@ void memory_set_value(char *r, char value)
     }
 }
 
-void float_2_byte() 
+void fp_printk(void) 
 {
     char result[100];
 
