@@ -54,7 +54,7 @@ void float_2_byte()
     for(i=strlength(result)-1; i>=0; i--) {
         if(result[i] != '0' || !zero_fill) {
             zero_fill = 0;
-            *(str + j) = result[i];
+            *(destination + j) = result[i];
             j++;
         }
     }
