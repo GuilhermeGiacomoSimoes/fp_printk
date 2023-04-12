@@ -12,12 +12,13 @@ static void __init fp_printk_init(void)
     fp_printk();
 }
 
-
-int strlength(char* str) {
+int strlength(char* str) 
+{
     return sizeof(str)/sizeof(char);
 }
 
-void memory_set_value(char *r, char value, int size) {
+void memory_set_value(char *r, char value, int size) 
+{
     for(int i=0; i < size; i++) {
         *(r + i) = value;
     }
