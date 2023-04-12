@@ -65,7 +65,7 @@ static void __exit fp_printk_exit(void)
     printk(KERN_INFO "module end");
 }
 
-module_init(fp_printk);
-module_exit();
+module_init(fp_printk_init);
+module_exit(fp_printk_exit);
 
 EXPORT_SYMBOL(fp_printk);
