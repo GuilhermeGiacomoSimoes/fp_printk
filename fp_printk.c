@@ -9,7 +9,8 @@ MODULE_VERSION("0.3.0");
 
 static int number;
 static char *destination;
-module_param(number, float, 0660);
+static int decimal_places;
+module_param(number, int, 0660);
 module_param(destination, charp, 0660);
 module_param(decimal_places, int, 0660);
 
