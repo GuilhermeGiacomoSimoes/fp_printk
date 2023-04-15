@@ -14,12 +14,12 @@ module_param(number, int, 0660);
 module_param(destination, charp, 0660);
 module_param(decimal_places, int, 0660);
 
-int strlength(char *str)
+static int strlength(char *str)
 {
 	return sizeof(str) / sizeof(char);
 }
 
-void memory_set_value(char *r, char value)
+static void memory_set_value(char *r, char value)
 {
 	for (int i = 0; i < strlength(r) - 1; i++) {
 		*(r + i) = value;
