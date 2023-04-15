@@ -7,10 +7,11 @@ MODULE_DESCRIPTION("This lib will show float-point in printk()");
 MODULE_LICENSE("MIT");
 MODULE_VERSION("0.3.0");
 
-static float number;
+static int number;
 static char *destination;
 module_param(number, float, 0660);
 module_param(destination, charp, 0660);
+module_param(decimal_places, int, 0660);
 
 int strlength(char *str)
 {
