@@ -28,30 +28,14 @@ static void memory_set_value(char *r, char value)
 
 void fp_printk(void)
 {
-	char result[100];
+	static char buffer[32] = {0};
+	static const int decimal_base = 10;
 
-	int d_val = number, dec = (int)(number * 100) % 100, i = 3;
+	int i = 30;
+	for(; number && i; --i, number /= decimal_base) 
+		buffer[i] = "0123456789"[number % decimal_base];
 
-	memory_set_value(result, '0');
-	result[0] = (dec % 10) + '0';
-	result[1] = (dec / 10) + '0';
-	result[2] = '.';
-
-	while (d_val > 0) {
-		result[i] = (d_val % 10) + '0';
-		d_val /= 10;
-		i++;
-	}
-
-	int index_destination = 0;
-	int zero_fill = 1;
-	for (i = strlength(result) - 1; i >= 0; i--) {
-		if (result[i] != '0' || !zero_fill) {
-			zero_fill = 0;
-			*(destination + index_destination) = result[i];
-			index_destination++;
-		}
-	}
+	destination = &buffer[i+1];
 }
 
 static int __init fp_printk_init(void)
