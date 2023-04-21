@@ -13,18 +13,6 @@ static int decimal_places;
 module_param(number, int, 0660);
 module_param(decimal_places, int, 0660);
 
-static int strlength(char *str)
-{
-	return sizeof(str) / sizeof(char);
-}
-
-static void memory_set_value(char *r, char value)
-{
-	for (int i = 0; i < strlength(r) - 1; i++) {
-		*(r + i) = value;
-	}
-}
-
 void fp_printk(void)
 {
 	static char buffer[32] = {0};
