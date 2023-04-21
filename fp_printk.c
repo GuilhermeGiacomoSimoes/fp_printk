@@ -16,13 +16,13 @@ void fp_printk(int number, int decimal_places)
 
 	for (; number && buf_index; --buf_index, number /= 10) {
 		count_decimal_place++;
-		if(!point && count_decimal_place > decimal_places) {
-			buffer[i] = '.';
-			i--;
+		if (!point_include && count_decimal_place > decimal_places) {
+			buffer[buf_index] = '.';
+			buf_index--;
 			point_include = 1;
 		}
 
-		buffer[i] = "0123456789"[number % 10];
+		buffer[buf_index] = "0123456789"[number % 10];
 	}
 
 	printk("%s", &buffer[buf_index+1]);
