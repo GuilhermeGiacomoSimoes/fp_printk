@@ -30,9 +30,6 @@ void fp_printk(int number, int decimal_places)
 
 static int __init fp_printk_init(void)
 {
-	if (destination == NULL)
-		return -EINVAL;
-	fp_printk();
 	return 0;
 }
 
