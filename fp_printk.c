@@ -16,13 +16,22 @@ module_param(decimal_places, int, 0660);
 void fp_printk(void)
 {
 	static char buffer[32] = {0};
-	static const int decimal_base = 10;
+	int buf_index = 30;
+	int count_decimal_place = 0;
+	int point_include = 0;
 
-	int i = 30;
-	for(; number && i; --i, number /= decimal_base) 
-		buffer[i] = "0123456789"[number % decimal_base];
+	for(; number && buf_index; --buf_index, number /= 10) {
+		count_decimal_place++;
+		if(!point && count_decimal_place > decimal_places) {
+			buffer[i] = '.';
+			i--;
+			point_include = 1;
+		}
 
-	destination = &buffer[i+1];
+		buffer[i] = "0123456789"[number % 10];
+	}
+
+	printk("%s", &buffer[buf_index+1]);
 }
 
 static int __init fp_printk_init(void)
