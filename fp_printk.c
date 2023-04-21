@@ -11,7 +11,6 @@ static int number;
 static char *destination;
 static int decimal_places;
 module_param(number, int, 0660);
-module_param(destination, charp, 0660);
 module_param(decimal_places, int, 0660);
 
 static int strlength(char *str)
