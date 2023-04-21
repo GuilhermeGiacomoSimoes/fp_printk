@@ -5,15 +5,9 @@
 MODULE_AUTHOR("Guilherme Giacomo Simoes <trintaeoitogc@gmail.com>");
 MODULE_DESCRIPTION("This lib will show float-point in printk()");
 MODULE_LICENSE("MIT");
-MODULE_VERSION("0.3.0");
+MODULE_VERSION("0.4.1");
 
-static int number;
-static char *destination;
-static int decimal_places;
-module_param(number, int, 0660);
-module_param(decimal_places, int, 0660);
-
-void fp_printk(void)
+void fp_printk(int number, int decimal_places)
 {
 	static char buffer[32] = {0};
 	int buf_index = 30;
