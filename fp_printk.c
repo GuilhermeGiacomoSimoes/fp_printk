@@ -28,7 +28,8 @@ void fp_printk(int number, int decimal_places)
 		buffer[buf_index] = "0123456789"[number % 10];
 	}
 
-	printk("%s\n", &buffer[buf_index + 1]);
+	char *str_result = &buffer[buf_index + 1];
+	pr_info("%s\n", str_result, OURMODNAME);
 }
 
 static int __init fp_printk_init(void)
