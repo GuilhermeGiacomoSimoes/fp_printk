@@ -1,3 +1,5 @@
+CONFIG_MODULE_SIG=n
+
 FNAME_c := fp_printk
 
 PWD := $(shell pwd)
@@ -10,7 +12,6 @@ all:
 	@echo '--- Building : KDIR=${KDIR} EXTRA_CFLAGS=${EXTRA_CFLAGS} ---'
 	@echo
 	make -C $(KDIR) M=$(PWD) modules
-
 install:
 	@echo
 	@echo "--- installing ---"
@@ -29,7 +30,6 @@ clean:
 	rm -f *~   # from 'indent'
 
 INDENT := indent
-
 code-style:
 	make indent
 
@@ -39,7 +39,6 @@ indent:
 	@echo
 	mkdir bkp 2> /dev/null; cp -f *.[chsS] bkp/
 	${INDENT} -linux --line-length95 *.[chsS]
-
 sa:
 	make sa_sparse
 	make sa_gcc
