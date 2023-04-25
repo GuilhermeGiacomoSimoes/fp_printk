@@ -58,3 +58,6 @@ sa:
 	make sa_gcc
 	make sa_flawfinder
 	make sa_cppcheck
+test:
+	gcc *_test.c -o ./test/test.out 
+	./test/test.out
