@@ -1,7 +1,6 @@
 #include <linux/init.h>
 #include <linux/module.h>
 #include <linux/kernel.h>
-#include <asm/fpu/api.h>
 
 #define OURMODNAME "fp_printk"
 
