@@ -10,7 +10,7 @@ MODULE_DESCRIPTION("This lib will show float-point in printk()");
 MODULE_LICENSE("MIT");
 MODULE_VERSION("0.4.1");
 
-void fp_printk(int number, int decimal_places)
+void fp_printk(int number, int decimal_places, char* destination)
 {
 	static char buffer[32] = { 0 };
 	int buf_index = 30;
@@ -28,8 +28,8 @@ void fp_printk(int number, int decimal_places)
 		buffer[buf_index] = "0123456789"[number % 10];
 	}
 
-	char *str_result = &buffer[buf_index + 1];
-	pr_info("%s\n", str_result, OURMODNAME);
+	destination = &buffer[buf_index + 1];
+	pr_info("%s\n", destination, OURMODNAME);
 }
 
 static int __init fp_printk_init(void)
