@@ -32,12 +32,13 @@ void fp_printk(int number, int decimal_places, char* destination)
 
 static int __init fp_printk_init(void)
 {
+	printk(KERN_INFO "%s: initial execute module", OURMODNAME);
 	return 0;
 }
 
 static void __exit fp_printk_exit(void)
 {
-	printk(KERN_INFO "module end");
+	printk(KERN_INFO "%s: module end", OURMODNAME);
 }
 
 module_init(fp_printk_init);
