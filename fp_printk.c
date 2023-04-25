@@ -27,8 +27,7 @@ void fp_printk(int number, int decimal_places, char* destination)
 		buffer[buf_index] = "0123456789"[number % 10];
 	}
 
-	destination = &buffer[buf_index + 1];
-	pr_info("%s\n", destination, OURMODNAME);
+	strcpy(destination, &buffer[buf_index + 1]);
 }
 
 static int __init fp_printk_init(void)
