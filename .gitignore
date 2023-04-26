@@ -15,3 +15,4 @@ fp_printk.mod.c
 fp_printk.mod.o
 fp_printk.o
 modules.order
+test
