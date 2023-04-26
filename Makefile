@@ -21,21 +21,6 @@ install:
 	@echo " [Now for the 'sudo make install' ]"
 	sudo make -C $(KDIR) M=$(PWD) modules_install
 	sudo depmod
-reinstall:
-	@echo
-	@echo "--- reinstalling ---"
-	@echo " [First, remove the module]"
-	sudo rmmod ${FNAME_c}
-	@echo
-	@echo " [ Now, clean the directory] "
-	make -C $(KDIR) M=$(PWD) clean
-	@echo
-	@echo " [Now, invoke the 'make' ]"
-	make
-	@echo
-	@echo " [Now for the 'sudo make install' ]"
-	sudo make -C $(KDIR) M=$(PWD) modules_install
-	sudo depmod
 clean:
 	@echo
 	@echo "--- cleaning ---"
