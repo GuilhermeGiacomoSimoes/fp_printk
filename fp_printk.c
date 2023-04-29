@@ -3,6 +3,7 @@
 #include <linux/kernel.h>
 
 #include "service.h"
+#include "fp_printk.h"
 
 #define OURMODNAME "fp_printk"
 
