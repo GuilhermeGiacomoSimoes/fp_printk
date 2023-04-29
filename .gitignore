@@ -16,3 +16,4 @@ fp_printk.mod.o
 fp_printk.o
 modules.order
 test
+.vscode/
