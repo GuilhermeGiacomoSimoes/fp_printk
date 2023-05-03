@@ -6,7 +6,7 @@
 
 MODULE_AUTHOR("Guilherme Giacomo Simoes <trintaeoitogc@gmail.com>");
 MODULE_DESCRIPTION("This lib will show float-point in printk()");
-MODULE_LICENSE("MIT");
+MODULE_LICENSE("GPL");
 MODULE_VERSION("0.4.1");
 
 void fp_printk(int number, int decimal_places, char* destination)
