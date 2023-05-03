@@ -5,13 +5,14 @@ FNAME_c := fp_printk
 PWD := $(shell pwd)
 obj-m += ${FNAME_c}.o
 EXTRA_CFLAGS += -DDEBUG
-KDIR ?= /lib/modules/$(shell uname -r)/build
+KDIR := /lib/modules/$(shell uname -r)/build
 
 all:
 	@echo
 	@echo '--- Building : KDIR=${KDIR} EXTRA_CFLAGS=${EXTRA_CFLAGS} ---'
 	@echo
-	make -C $(KDIR) M=$(PWD) modules
+	make -C $(KDIR) M=$(PWD)
+
 install:
 	@echo
 	@echo "--- installing ---"
