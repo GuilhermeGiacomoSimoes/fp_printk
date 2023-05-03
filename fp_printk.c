@@ -2,9 +2,6 @@
 #include <linux/module.h>
 #include <linux/kernel.h>
 
-#include "service.h"
-#include "fp_printk.h"
-
 #define OURMODNAME "fp_printk"
 
 MODULE_AUTHOR("Guilherme Giacomo Simoes <trintaeoitogc@gmail.com>");
