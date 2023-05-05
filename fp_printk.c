@@ -9,7 +9,7 @@ MODULE_DESCRIPTION("This lib will show float-point in printk()");
 MODULE_LICENSE("GPL");
 MODULE_VERSION("0.4.1");
 
-void fp_printk(int number, int decimal_places, char* destination)
+void fp_printk(int number, int decimal_places, char *destination)
 {
 	static char buffer[32] = { 0 };
 	int buf_index = 30;
