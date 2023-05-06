@@ -29,6 +29,7 @@ void fp_printk(int number, int decimal_places, char *destination)
 
 	destination = &buffer[buf_index + 1];
 }
+EXPORT_SYMBOL(fp_printk);
 
 static int __init fp_printk_init(void)
 {
@@ -44,4 +45,3 @@ static void __exit fp_printk_exit(void)
 module_init(fp_printk_init);
 module_exit(fp_printk_exit);
 
-EXPORT_SYMBOL(fp_printk);
