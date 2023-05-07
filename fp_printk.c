@@ -33,13 +33,13 @@ EXPORT_SYMBOL(fp_printk);
 
 static int __init fp_printk_init(void)
 {
-	printk(KERN_INFO "%s: initial execute module", OURMODNAME);
+	pr_info("%s: initial execute module", OURMODNAME);
 	return 0;
 }
 
 static void __exit fp_printk_exit(void)
 {
-	printk(KERN_INFO "%s: module end", OURMODNAME);
+	pr_info("%s: module end", OURMODNAME);
 }
 
 module_init(fp_printk_init);
