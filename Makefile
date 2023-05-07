@@ -44,3 +44,32 @@ sa:
 	make sa_gcc
 	make sa_flawfinder
 	make sa_cppcheck
+
+
+sa_sparse:
+	make clean
+	@echo
+	@echo "--- static analysis with sparse ---"
+	@echo
+	make C=2 CHECK="/usr/bin/sparse" -C $(KDIR) M=$(PWD) modules
+
+sa_gcc:
+	make clean
+	@echo
+	@echo "--- static analysis with gcc ---"
+	@echo
+	make W=1 -C $(KDIR) M=$(PWD) modules
+	 
+sa_flawfinder:
+	make clean
+	@echo
+	@echo "--- static analysis with flawfinder ---"
+	@echo
+	flawfinder *.[ch]
+
+sa_cppcheck:
+	make clean
+	@echo
+	@echo "--- static analysis with cppcheck ---"
+	@echo
+	cppcheck -v --force --enable=all -i .tmp_versions/ -i *.mod.c -i bkp/ --suppress=missingIncludeSystem .
