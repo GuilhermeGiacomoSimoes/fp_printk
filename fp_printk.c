@@ -7,7 +7,7 @@
 MODULE_AUTHOR("Guilherme Giacomo Simoes <trintaeoitogc@gmail.com>");
 MODULE_DESCRIPTION("This lib will convert int to string float");
 MODULE_LICENSE("GPL");
-MODULE_VERSION("1.0.0-BETA");
+MODULE_VERSION("1.1.1-BETA");
 
 void fp_printk(int number, int decimal_places, char *destination)
 {
