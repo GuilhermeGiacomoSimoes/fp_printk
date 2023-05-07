@@ -5,7 +5,7 @@
 #define OURMODNAME "fp_printk"
 
 MODULE_AUTHOR("Guilherme Giacomo Simoes <trintaeoitogc@gmail.com>");
-MODULE_DESCRIPTION("This lib will show float-point in printk()");
+MODULE_DESCRIPTION("This lib will convert int to string float");
 MODULE_LICENSE("GPL");
 MODULE_VERSION("1.0.0-BETA");
 
