@@ -43,14 +43,6 @@ static void should_return_12_without_errors_and_float_point(struct kunit *test)
     kfree(destination);
 }
 
-static void should_return_12_without_errors_and_float_point(struct kunit *test)
-{
-    char *destination = kmalloc(sizeof("12", GFP_KERNEL)); 
-    fp_printk(12, 0, destination);
-    KUNIT_EXPECT_EQ(test, "2", destination);
-    kfree(destination);
-}
-
 static void should_return_ERROR_if_parse_number_NULL(struct kunit *test)
 {
     char *destination = kmalloc(sizeof("12", GFP_KERNEL)); 
