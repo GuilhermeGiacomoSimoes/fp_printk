@@ -1,9 +1,11 @@
 CONFIG_MODULE_SIG=n
 
-FNAME_c := fp_printk
+FNAME_c := int_to_fp_str
+TNAME_c := int_to_fp_str_test
 
 PWD := $(shell pwd)
 obj-m += $(FNAME_c).o
+obj-m += $(TNAME_c).o
 EXTRA_CFLAGS += -DDEBUG
 KDIR ?= /lib/modules/$(shell uname -r)/build
 
