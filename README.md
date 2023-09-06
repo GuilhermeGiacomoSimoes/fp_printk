@@ -8,8 +8,14 @@ int_to_fp_str convert the int to string for using in printk();<br><br>
 ## INSTALATION
 Only run this sequence of commands:<br>
 ```
-make //for compile
-sudo insmod int_to_fp_str.ko
+make                            //for compile
+sudo insmod int_to_fp_str.ko    //for insert module in the kernel
 ```
+
+## UNINSTALL
+```
+sudo rmmod int_to_fp_str
+```
+
 <br>
 Well ... that's done 
