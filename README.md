@@ -27,8 +27,8 @@ Then you import the lib in your module `#include <linux/int2fpstr>`. In the foll
 
 #include <linux/int2fpstr.h>
 
-MODULE_AUTHOR("SEU NOME <seu_email@email.com>");
-MODULE_DESCRIPTION("Introducao a criacao de driver pra linux");
+MODULE_AUTHOR("SEU NOME <example@email.com>");
+MODULE_DESCRIPTION("EXAMPLE int2fpstr use");
 
 static int __init hello_world_init(void)
 {
