@@ -39,4 +39,8 @@ run this:<br>
 `./tools/testing/kunit/kunit.py run "int2fpstr"`
 
 
-Well ... that's done 
+
+## PROBLEMNS
+This lib have problemns.<br>
+The first is that you need use the `kfree` in the result before call int2fpstr function. <br>
+If you is a experient dev, you know that pointers is a source bug a lot.
