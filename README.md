@@ -8,16 +8,16 @@ int2fpstr convert the int to string for using in printk();<br><br>
 ## HOW TO USE
 If you get my [fork kernel](https://github.com/GuilhermeGiacomoSimoes/linux), you has this lib and another changes. <br>
 But if you run the kernel from linus, then you need move this lib to kernel, compile and move binary result <br>
-to yout `/boot`.
+to your `/boot`.
 
 ### MOVE THE LIB
 Clone this repository: <br>
-`git clone https://github.com/GuilhermeGiacomoSimoes/fp_printk` <br><br>
+`git clone https://github.com/GuilhermeGiacomoSimoes/fp_printk` <br>
 
 Then you need move the int2fpstr.h to kernel source code: <br>
-`mv int2fpstr.h ${KERNEL_SOURCE_TREE}/include/kernel`<br><br>
+`mv int2fpstr.h ${KERNEL_SOURCE_TREE}/include/kernel`<br>
 
-This is enough to use the int2fpstr. But if you want the unittests, then you should move this to kernel source tree to:<br>
+This is enough to use the int2fpstr. But if you want the unittests, then you should move this to kernel source tree too:<br>
 `mv int2fpstr_kunit.c ${KERNEL_SOURCE_TREE}/lib`<br>
 Then, you need increment in the end files Makefile and Kconfig.debug the follow:<br>
 Makefile<br>
