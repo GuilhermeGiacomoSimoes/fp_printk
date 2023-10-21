@@ -72,3 +72,4 @@ kunit_test_suite(int_to_fp_str_test);
 
 MODULE_AUTHOR("Guilherme Giacomo Simoes <trintaeoitogc@gmail.com>");
 MODULE_LICENSE("GPL");
+MODULE_VERSION("v1.3.0");
