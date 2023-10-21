@@ -42,5 +42,5 @@ run this:<br>
 
 ## PROBLEMNS
 This lib have problemns.<br>
-The first is that you need use the `kfree` in the result before call int2fpstr function. <br>
+The first is that you need use the `kfree` in the result after call int2fpstr function. <br>
 If you is a experient dev, you know that pointers is a source bug a lot.
