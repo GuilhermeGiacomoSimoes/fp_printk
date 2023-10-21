@@ -18,11 +18,12 @@ Then you need move the int2fpstr.h to kernel source code: <br>
 `mv int2fpstr.h ${KERNEL_SOURCE_TREE}/include/kernel`<br>
 
 ### USE THE LIB
-Then you import the lib in your module `#include <linux/int2fpstr>`. Follow i show the simples use example:
+Then you import the lib in your module `#include <linux/int2fpstr>`. In the follow i show the simples use example:
 ```
 #include <linux/init.h>
 #include <linux/module.h>
 #include <linux/kernel.h>
+#include <linux/slab.h>
 
 #include <linux/int2fpstr.h>
 
@@ -37,6 +38,7 @@ static int __init hello_world_init(void)
     //str_number contain value = "12.34"
     char *str_number = int2fpstr(int_numer, count_decimal_places);
     pr_info("%s", str_number);
+    kfree(str_number);
 
     return 0;
 }
