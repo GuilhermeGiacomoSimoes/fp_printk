@@ -36,7 +36,7 @@ config INT2FPSTR_KUNIT_TEST
 ## RUN UNITTEST
 To run this unittest in kernel linux, first you need dependency installs, and then
 run this:<br>
-`./tools/testing/kunit/kunit.py run "int2fpstr"`
+`./tools/testing/kunit/kunit.py run "int2fpstr"` <br><br>
 
 
 
