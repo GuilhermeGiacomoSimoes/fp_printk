@@ -17,6 +17,7 @@ Clone this repository: <br>
 Then you need move the int2fpstr.h to kernel source code: <br>
 `mv int2fpstr.h ${KERNEL_SOURCE_TREE}/include/kernel`<br>
 
+### USE THE LIB
 Then you import the lib in your module `#include <linux/int2fpstr>`. Follow i show the simples use example:
 ```
 #include <linux/init.h>
