@@ -45,7 +45,7 @@ static int __init hello_world_init(void)
 
 static void __exit hello_world_exit(void)
 {
-    pr_info("Adeus mundo cruel\n");
+    pr_info("Good bye cruel world\n");
 }
 
 module_init(hello_world_init);
