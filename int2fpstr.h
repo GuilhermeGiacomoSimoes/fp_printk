@@ -28,8 +28,7 @@ inline char *int2fpstr(int number, int decimal_places)
 		return NULL;
 	}
 
-	int buf_index = 30;
-	int count_decimal_place = 0;
+	int c_dec_places = 0;
 	int point_include = decimal_places < 1;
 
 	int neg = number < 0;
@@ -41,9 +40,9 @@ inline char *int2fpstr(int number, int decimal_places)
 	for (; number && buf_index; 
 		--buf_index, number /= 10) 
 	{
-		count_decimal_place++;
+		c_dec_places++;
 		if (!point_include 
-			&& count_decimal_place > decimal_places) 
+			&& c_dec_places > decimal_places) 
 		{
 			buffer[buf_index--] = '.';
 			point_include = 1;
